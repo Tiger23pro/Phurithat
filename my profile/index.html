@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>โปรไฟล์ของฉัน</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="card">
+    <!-- ตำแหน่งเมาส์ -->
+    <p id="mouse-position">ตำแหน่งเมาส์: X: -, Y: -</p>
+
+    <!-- รูปโปรไฟล์และชื่อ -->
+    <img src="Killua-Zoldyck.jpg" alt="รูปโปรไฟล์">
+    <h1 id="name">ไทเกอร์</h1>
+    <p id="description">Full Stack Dev in progress... ☕</p>
+
+    <!-- คำคม และ bio -->
+    <p id="quote" class="quote">"Loading inspiration..."</p>
+
+    <!-- เส้นทางการเรียนรู้ -->
+    <div class="timeline">
+      <h3>📚 เส้นทางของฉัน</h3>
+      <ul>
+        <li>✅ HTML & CSS เบื้องต้น</li>
+        <li>✅ JavaScript เบื้องต้น</li>
+        <li>🟡 กำลังเรียน JavaScript DOM</li>
+        <li>⬜️ ต่อไป: React.js</li>
+      </ul>
+    </div>
+
+    <!-- ปุ่มควบคุมข้อมูล -->
+    <section class="actions">
+      <button onclick="changeDescription()">เปลี่ยนคำอธิบาย</button>
+      <button onclick="displayRandomQuote()">เปลี่ยนคำคม</button>
+      <button onclick="changeName()">เปลี่ยนชื่อ</button>
+    </section>
+
+    <!-- กล่องป้อนชื่อใหม่ -->
+    <section id="name-input-section" style="display: none; margin-top: 10px;">
+      <input type="text" id="name-input" placeholder="กรอกชื่อใหม่" />
+      <button onclick="submitNewName()">ยืนยัน</button>
+    </section>
+
+    <!-- แสดงชื่อที่พิมพ์สด -->
+    <section class="live-name">
+      <p>พิมพ์ชื่อที่นี่:</p>
+      <input type="text" id="live-name-input" placeholder="ลองพิมพ์ชื่อดูสิ">
+      <p>ชื่อที่คุณพิมพ์: <span id="live-name-output">---</span></p>
+    </section>
+
+    <!-- ปุ่มธีมและข้อมูลติดต่อ -->
+    <section class="settings">
+      <button onclick="toggleTheme()">เปลี่ยนธีม</button>
+      <button onclick="alert('IG: @phurithattt\nเบอร์: 093-934-0428')">ติดต่อเรา</button>
+      <p id="email">📧 phurithattai@gmail.com</p>
+      <button onclick="copyEmail()">คัดลอกอีเมล</button>
+    </section>
+
+    <!-- ลิงก์โซเชียล -->
+    <div class="socials">
+      <a href="https://www.instagram.com/phurithattt/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/phurithat.tai" target="_blank">Facebook</a>
+      <a href="https://github.com/Tiger23pro" target="_blank">GitHub</a>
+    </div>
+
+    <!-- ปุ่มจัดการ timeline -->
+    <section class="timeline-controls">
+      <button onclick="addTimelineItem()">เพิ่มรายการเรียนรู้</button>
+      <button onclick="removeTimeline()">ลบเส้นทางการเรียน</button>
+      <button onclick="highlightBio()">ไฮไลต์ bio</button>
+    </section>
+  </main>
+
+  <!-- สคริปต์หลัก -->
+  <script src="script.js"></script>
+</body>
+</html>
